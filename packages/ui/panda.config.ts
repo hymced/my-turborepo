@@ -28,6 +28,4 @@ export default defineConfig({
   jsxFramework: "react",
   presets: ["@pandacss/dev/presets"],
   importMap: "@repo/styled-system" // ???
-  // yarn add @repo/styled-system does not work as it does with pnpm
-  // --> yarn add styled-system OK
 });
