@@ -3,6 +3,6 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "include": ["src", "turbo", "panda.config.ts"],
+  "include": ["panda.config.ts", "css" , "jsx", "patterns", "recipes", "tokens", "types"],
   "exclude": ["node_modules", "dist"]
 }

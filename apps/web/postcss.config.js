@@ -1,0 +1,20 @@
+module.exports = {
+  plugins: [
+    // Next default postcss config:
+    // "postcss-flexbugs-fixes",
+    // [
+    //   "postcss-preset-env",
+    //   {
+    //     autoprefixer: {
+    //       flexbox: "no-2009",
+    //     },
+    //     stage: 3,
+    //     features: {
+    //       "custom-properties": false,
+    //     },
+    //   },
+    // ],
+    
+    "@pandacss/dev/postcss",
+  ],
+};

@@ -1,7 +1,32 @@
+// 'use client'
+
 import Image from "next/image";
-import { Card } from "@repo/ui/card";
-import { Code } from "@repo/ui/code";
+// import { Card } from "@repo/ui/card";
+// import { Code } from "@repo/ui/code";
+import { Card, Code, Button } from "@repo/ui";
 import styles from "./page.module.css";
+
+// import { styled } from "../styled-system/jsx";
+
+// const Styled = styled("button", {
+//    base: {
+//     py: '2',
+//     px: '4',
+//     rounded: 'md'
+//   },
+//   variants: {
+//     appVariant: {
+//       appPrimary: {
+//         bg: 'blue.400',
+//         color: 'white'
+//       },
+//       appSecondary: {
+//         bg: 'red.400',
+//         color: 'white'
+//       }
+//     }
+//   }
+// })
 
 function Gradient({
   conic,
@@ -52,7 +77,12 @@ const LINKS = [
 
 export default function Page(): JSX.Element {
   return (
+    <>
+    <Button>click!!!</Button>
+    {/* <Styled appVariant="appPrimary">click!!!</Styled> */}
+    
     <main className={styles.main}>
+
       <div className={styles.description}>
         <p>
           examples/basic&nbsp;
@@ -80,14 +110,14 @@ export default function Page(): JSX.Element {
       <div className={styles.hero}>
         <div className={styles.heroContent}>
           <div className={styles.logos}>
-            <div className={styles.circles}>
+            {/* <div className={styles.circles}>
               <Image
                 alt="Turborepo"
                 height={614}
                 src="circles.svg"
                 width={614}
               />
-            </div>
+            </div> */}
             <div className={styles.logoGradientContainer}>
               <Gradient className={styles.logoGradient} conic small />
             </div>
@@ -102,7 +132,7 @@ export default function Page(): JSX.Element {
               />
             </div>
           </div>
-          <Gradient className={styles.backgroundGradient} conic />
+          {/* <Gradient className={styles.backgroundGradient} conic /> */}
           <div className={styles.turborepoWordmarkContainer}>
             <svg
               className={styles.turborepoWordmark}
@@ -132,6 +162,8 @@ export default function Page(): JSX.Element {
           </Card>
         ))}
       </div>
+      
     </main>
+    </>
   );
 }

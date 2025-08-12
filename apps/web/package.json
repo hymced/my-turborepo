@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --max-warnings 0"
+    "lint": "eslint . --max-warnings 0",
+    "clean": "rm -rf .next node_modules styled-system"
   },
   "dependencies": {
     "@repo/ui": "*",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.1.1",
+    "@pandacss/dev": "^1.0.1",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@types/eslint": "^8.56.5",
