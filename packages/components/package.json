@@ -5,13 +5,16 @@
   "main": "./index.tsx",
   "types": "./index.tsx",
   "scripts": {
-    "clean": "rm -rf .turbo && rm -rf node_modules"
+    "clean": "rm -rf .turbo node_modules",
+    "prepare": "panda codegen",
+    "emit": "panda emit"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@pandacss/dev": "^1.0.1",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "react": "^18.3.1",
