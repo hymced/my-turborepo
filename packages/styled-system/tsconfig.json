@@ -1,8 +1,0 @@
-{
-  "extends": "@repo/typescript-config/react-library.json",
-  "compilerOptions": {
-    "outDir": "dist"
-  },
-  "include": ["panda.config.ts", "css" , "jsx", "patterns", "recipes", "tokens", "types"],
-  "exclude": ["node_modules", "dist"]
-}
