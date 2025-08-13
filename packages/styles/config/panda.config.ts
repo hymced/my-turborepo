@@ -36,28 +36,7 @@ const SIZES = {
   gutterY: '1.2rem',
 }
 
-// const foo = {
-//   a: 1,
-//   b: 2,
-// }
-// const obj1 = (Object.keys(foo) as Array<keyof typeof foo>).reduce((bar, k) => {
-//   const f = foo[k]
-//   bar[k] = {value: f} 
-//   return bar
-// }, {} as Record<keyof typeof foo, {value: string|number}>)
-// const obj2 = (Object.keys(foo) as (keyof typeof foo)[]).reduce((bar, k) => {
-//   const f = foo[k]
-//   bar[k] = {value: f} 
-//   return bar
-// }, {} as Record<keyof typeof foo, {value: string|number}>)
-// const obj3 = (Object.keys(foo) as Array<keyof typeof foo>).reduce<Partial<Record<keyof typeof foo, {value: string|number}>>>((bar, k) => {
-//   const f = foo[k]
-//   bar[k] = {value: f} 
-//   return bar
-// }, {})
-// const formatOptionsValuesString = <T extends { [key: string]: string }>(options: T) => Object.keys(options).reduce((acc, k) => (acc[k] = {value: options[k]}, acc), {} as { [key: string]: {value: string} })
-
-const formatOptionsValuesTyped = <T extends {}>(options: T) => {
+const formatOptionsValues = <T extends {}>(options: T) => {
   const keys = Object.keys(options) as Array<keyof T>
   return keys.reduce((acc, k) => {
     acc[k] = {value: options[k]} 
@@ -94,9 +73,9 @@ export default defineConfig({
   theme: {
     extend: {
       tokens: {
-        colors: formatOptionsValuesTyped(COLORS),
-        fonts: formatOptionsValuesTyped(FONTS),
-        sizes: formatOptionsValuesTyped(SIZES),
+        colors: formatOptionsValues(COLORS),
+        fonts: formatOptionsValues(FONTS),
+        sizes: formatOptionsValues(SIZES),
       },
       breakpoints: {
         xs: '480px',
