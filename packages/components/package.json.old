@@ -9,8 +9,7 @@
   ],
   "scripts": {
     "clean": "rm -rf .turbo node_modules",
-    "prepare": "panda codegen",
-    "emit": "panda emit"
+    "prepare": "panda codegen"
   },
   "dependencies": {
     "react": "^18.3.1",

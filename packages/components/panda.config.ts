@@ -20,8 +20,18 @@ export default defineConfig({
     
     include: ["./src/**/*.{js,jsx,ts,tsx}"],
     outdir: "../styles",
+
     clean: false,
     jsxFramework: "react",
-    presets: [],
+    // presets: [],
 
+    theme: {
+      extend: {
+        tokens: {
+          colors: {
+            kale: { value: '#075526' } // kale
+          }
+        }
+      }
+    }
 });

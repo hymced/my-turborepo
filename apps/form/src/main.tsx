@@ -2,14 +2,14 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
 import "./panda.css";
-import "styles/styles.css"
+// import "styles/styles.css"
 
 import typescriptLogo from "/typescript.svg";
 // import { Counter } from "components";
 // import { Counter } from "@components";
 import Counter from "@components/Counter";
-import { styled } from "../styled-system/jsx"
-import { css } from "../styled-system/css"
+import { styled } from "styles/jsx"
+import { css } from "styles/css"
 
 const StyledButton = styled("button", {
   base: {
@@ -47,8 +47,9 @@ const App = () => (
     </div>
     <Counter />
     <StyledButton variant="primary" onClick={() => console.log("hello")}>primary</StyledButton>
-    <StyledButton variant="secondary" onClick={() => console.log("hello")}>primary</StyledButton>
+    <StyledButton variant="secondary" onClick={() => console.log("hello")}>secondary</StyledButton>
     <button className={css({color: "cobalt"})}>color cobalt</button>
+    <button className={css({color: "kale"})}>color kale</button>
     <button className={css({bg: "red"})}>bg red</button>
   </>
 );

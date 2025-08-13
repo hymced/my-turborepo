@@ -1,5 +1,7 @@
 import { defineConfig } from "@pandacss/dev";
 
+import config from "components/panda.config"
+
 const BRAND = {
   primary: '#f44831',
   beet: '#9d1716',
@@ -28,11 +30,18 @@ export default defineConfig({
   // // The output directory for your css system
   // outdir: "styled-system",
   
-  include: ["./src/**/*.{js,jsx,ts,tsx}"],
-  clean: true,
+  outdir: "../../packages/styles",
+  include: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "../../packages/components/src/**/*.{js,jsx,ts,tsx}"
+  ],
+  // clean: true,
   jsxFramework: "react",
-  presets: [], // removes the default design tokens injected by panda from @pandacss/preset-panda --> extend key in theme can be omitted
-  eject: true, // removes @pandacss/preset-base
+  // presets: [], // removes the default design tokens injected by panda from @pandacss/preset-panda --> extend key in theme can be omitted
+  // eject: true, // removes @pandacss/preset-base
+  // presets: [],
+  // presets: [config],
+  presets: ["@pandacss/preset-panda", config],
 
   theme: {
     extend: {

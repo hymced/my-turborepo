@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "prepare": "panda codegen",
-    "clean": "rm -rf .turbo node_modules styled-system"
+    "clean": "rm -rf .turbo dist node_modules"
   },
   "dependencies": {
     "components": "*",

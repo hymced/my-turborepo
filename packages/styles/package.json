@@ -9,7 +9,7 @@
   ],
   "style": "styles.css",
   "scripts": {
-    "clean": "rm -rf .turbo node_modules"
+    "clean": "rm -rf .turbo node_modules css jsx patterns recipes tokens types helpers.mjs styles.css"
   },
   "dependencies": {
 
