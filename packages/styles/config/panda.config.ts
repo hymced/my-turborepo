@@ -45,7 +45,7 @@ const formatOptionsValues = <T extends {}>(options: T) => {
 }
 
 export default defineConfig({
-  globalCss: globalCss,
+  globalCss,
 
   globalFontface: {
     Viksjow: {
