@@ -2,23 +2,9 @@
   "private": true,
   "name": "styles",
   "version": "0.0.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
-  "files": [
-    "styles.css"
-  ],
-  "style": "styles.css",
   "scripts": {
-    "clean": "rm -rf .turbo node_modules css jsx patterns recipes tokens types helpers.mjs styles.css"
+    "clean": "rm -rf .turbo node_modules css jsx patterns recipes tokens types helpers.mjs"
   },
-  "dependencies": {
-
-  },
-  "devDependencies": {
-    "tsconfig": "*",
-    "typescript": "^5.6.3"
-  },
-
   "exports": {
     "./css": {
       "types": "./css/index.d.ts",
@@ -49,7 +35,6 @@
       "types": "./jsx/index.d.ts",
       "require": "./jsx/index.mjs",
       "import": "./jsx/index.mjs"
-    },
-    "./styles.css": "./styles.css"
+    }
   }
 }

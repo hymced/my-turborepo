@@ -2,12 +2,11 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
 import "./panda.css";
-// import "styles/styles.css"
 
 import typescriptLogo from "/typescript.svg";
-// import { Counter } from "components";
 // import { Counter } from "@components";
-import Counter from "@components/Counter";
+// import Counter from "@components/Counter";
+import { Counter } from "components";
 import { styled } from "styles/jsx"
 import { css } from "styles/css"
 
