@@ -1,6 +1,6 @@
 import { defineConfig } from "@pandacss/dev";
-
 import componentsConfig from "components/panda.config"
+import stylesConfig from "styles/config"
 
 const BRAND = {
   primary: '#f44831',
@@ -20,15 +20,14 @@ export default defineConfig({
   ],
   clean: false, // keep workspace folder for outdir
   jsxFramework: "react",
-  presets: ["@pandacss/preset-panda", componentsConfig],
+  presets: ["@pandacss/preset-panda", stylesConfig, componentsConfig], // order matter
 
   theme: {
     extend: {
       tokens: {
         colors: {
-          cobalt: { value: '#0064d1' }
+          app_cobalt: { value: BRAND.cobalt }
         }
-        // colors: Object.keys(BRAND).reduce((c, k) => (c[k] = {value: BRAND[k]}, c), {})
       }
   }}
 })

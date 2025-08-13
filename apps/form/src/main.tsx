@@ -10,6 +10,16 @@ import { Counter } from "components";
 import { styled } from "styles/jsx"
 import { css } from "styles/css"
 
+const BRAND = {
+  primary: '#f44831',
+  beet: '#9d1716',
+  radish: '#fcb2b0',
+  yolk: '#ffc847',
+  powder: '#c6eaf6',
+  cobalt: '#0064d1',
+  kale: '#075526',
+}
+
 const StyledButton = styled("button", {
   base: {
     py: '10',
@@ -23,7 +33,7 @@ const StyledButton = styled("button", {
         color: 'blue.800'
       },
       secondary: {
-        bg: '#9d1716', // beet
+        bg: BRAND.beet,
         color: 'white'
       }
     }
@@ -47,8 +57,8 @@ const App = () => (
     <Counter />
     <StyledButton variant="primary" onClick={() => console.log("hello")}>primary</StyledButton>
     <StyledButton variant="secondary" onClick={() => console.log("hello")}>secondary</StyledButton>
-    <button className={css({color: "cobalt"})}>color cobalt</button>
-    <button className={css({color: "kale"})}>color kale</button>
+    <button className={css({color: "app_cobalt"})}>color cobalt</button>
+    <button className={css({color: "components_kale"})}>color kale</button>
     <button className={css({bg: "red"})}>bg red</button>
     <button className={css({ foo: 'lg', border: "1px solid red" })}>foo lg</button>
     <styled.button foo="sm" border="1px solid red">foo sm</styled.button>
