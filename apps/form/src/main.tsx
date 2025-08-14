@@ -4,11 +4,9 @@ import "./style.css";
 import "./panda.css";
 
 import typescriptLogo from "/typescript.svg";
-// import { Counter } from "@components";
-// import Counter from "@components/Counter";
 import { Counter } from "components";
-import { styled } from "styles/jsx"
-import { css } from "styles/css"
+import { styled } from "@mono/styles/jsx"
+import { css } from "@mono/styles/css"
 
 const BRAND = {
   primary: '#f44831',
@@ -58,7 +56,6 @@ const App = () => (
     <StyledButton variant="primary" onClick={() => console.log("hello")}>primary</StyledButton>
     <StyledButton variant="secondary" onClick={() => console.log("hello")}>secondary</StyledButton>
     <button className={css({color: "app_cobalt"})}>color cobalt</button>
-    <button className={css({color: "components_kale"})}>color kale</button>
     <button className={css({bg: "red"})}>bg red</button>
     <button className={css({ foo: 'lg', border: "1px solid red" })}>foo lg</button>
     <styled.button foo="sm" border="1px solid red">foo sm</styled.button>

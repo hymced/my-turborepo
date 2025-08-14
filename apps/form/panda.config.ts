@@ -1,6 +1,5 @@
 import { defineConfig } from "@pandacss/dev";
-import componentsConfig from "components/panda.config"
-import stylesConfig from "styles/config"
+import stylesConfig from "@mono/styles/config"
 
 const BRAND = {
   primary: '#f44831',
@@ -13,14 +12,16 @@ const BRAND = {
 }
 
 export default defineConfig({
-  outdir: "../../packages/styles",
+  outdir: "styles", // will always be generated locally in form app without a relative path
+  // outdir: "@mono/styles", // will always be generated locally in form app without a relative path
   include: [
     "./src/**/*.{js,jsx,ts,tsx}",
     "../../packages/components/src/**/*.{js,jsx,ts,tsx}"
   ],
-  clean: false, // keep workspace folder for outdir
+  // clean: false, // keep workspace folder for outdir
   jsxFramework: "react",
-  presets: ["@pandacss/preset-panda", stylesConfig, componentsConfig], // order matter
+  presets: ["@pandacss/preset-panda", stylesConfig], // order matter
+  importMap: "@mono/styles", // only if workspace package from which we import does not have outdir as base path
 
   theme: {
     extend: {

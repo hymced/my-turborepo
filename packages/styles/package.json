@@ -1,9 +1,10 @@
 {
   "private": true,
-  "name": "styles",
+  "name": "@mono/styles",
   "version": "0.0.0",
   "scripts": {
-    "clean": "rm -rf .turbo node_modules css jsx patterns recipes tokens types helpers.mjs"
+    "clean": "rm -rf .turbo node_modules css jsx patterns recipes tokens types helpers.mjs",
+    "prepare": "panda codegen"
   },
   "devDependencies": {
     "@pandacss/dev": "^1.0.1",
