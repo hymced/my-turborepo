@@ -8,13 +8,13 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "prepare": "panda codegen",
-    "clean": "rm -rf .turbo dist node_modules styles"
+    "clean": "rm -rf .turbo dist node_modules"
   },
   "dependencies": {
     "components": "*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "@mono/styles": "*"
+    "styles": "*"
   },
   "devDependencies": {
     "@pandacss/dev": "^1.0.1",

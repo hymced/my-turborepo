@@ -1,4 +1,4 @@
-import { styled } from "@mono/styles/jsx"
+import { styled } from "styles/jsx"
 
 const Styled = styled("button", {
   base: {

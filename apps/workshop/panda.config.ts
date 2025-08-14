@@ -15,8 +15,8 @@ export default defineConfig({
   outdir: "../../packages/styles",
   clean: false, // keep styles workspace package
   include: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    //  "../../packages/components/src/**/*.{js,jsx,ts,tsx}" // works without?
+    "./src/**/*.{js,jsx,ts,tsx}", 
+    "../../packages/components/src/**/*.{js,jsx,ts,tsx}"
   ],
   presets: ["@pandacss/preset-panda", stylesConfig], // order of presets matter // only Preset type settings are used (not outdir or include, so it is okay to set them before here)
   jsxFramework: "react",

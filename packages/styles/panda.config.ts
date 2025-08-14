@@ -119,8 +119,4 @@ export default defineConfig({
       hover: ['@media (hover: hover) and (pointer: fine)', '&:hover'],
     },
   },
-
-  outdir: "./",
-  clean: false,
-  jsxFramework: "react",
 })

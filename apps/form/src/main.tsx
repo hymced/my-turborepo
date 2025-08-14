@@ -5,8 +5,8 @@ import "./panda.css";
 
 import typescriptLogo from "/typescript.svg";
 import { Counter } from "components";
-import { styled } from "@mono/styles/jsx"
-import { css } from "@mono/styles/css"
+import { styled } from "styles/jsx"
+import { css } from "styles/css"
 
 const BRAND = {
   primary: '#f44831',

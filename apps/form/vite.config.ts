@@ -8,11 +8,11 @@ export default defineConfig({
     legacy({
       targets: ['>0.3%', 'defaults', 'not dead'],
     }),
-    react()
+    react(), 
   ],
-  resolve: {
-    alias: {
-      '@components': path.resolve(__dirname, '../../packages/components/src'),
-    },
-  },
+  // resolve: {
+  //   alias: {
+  //     '@components': path.resolve(__dirname, '../../packages/components/src'),
+  //   },
+  // },
 });
